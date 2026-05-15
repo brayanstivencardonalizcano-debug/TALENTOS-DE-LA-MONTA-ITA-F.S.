@@ -484,3 +484,40 @@ footer {
     height: auto;
     min-height: calc(100vh - 80px - 70px);
 }
+
+/* ==========================================
+   11. eventos
+   ========================================== */
+.eventos{
+    padding:60px 20px;
+    background: url('BANNER/torneo.png') center/cover no-repeat;
+    text-align:center;
+}
+
+.eventos h2{
+    font-size:32px;
+    margin-bottom:40px;
+}
+
+.eventos-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap:25px;
+}
+
+.evento-card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:transform 0.3s;
+}
+
+.evento-card:hover{
+    transform:translateY(-8px);
+}
+
+.evento-card h3{
+    margin-bottom:15px;
+    color:#07550c;
+}
