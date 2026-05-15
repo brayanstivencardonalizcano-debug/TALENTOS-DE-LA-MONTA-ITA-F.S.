@@ -1,95 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Talentos De La Montañita F.S.</title>
-<link rel="icon" type="image/png" href="LOGO/LOGO.png">
-<link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talentos De La Montañita F.S.</title>
+    <!-- Icono de la pestaña -->
+    <link rel="icon" type="image/png" href="LOGO/LOGO.png">
+    <!-- Hojas de estilos -->
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Iconos modernos de Google -->
+    <link rel="stylesheet" href="https://googleapis.com" />
 </head>
-
 <body>
 
-<header>
-    <div class="logo-titulo">
-        <img src="LOGO/LOGO.png" alt="Logo Talentos">
-        <h1>Talentos De La Montañita</h1>
-    </div>
-
-    <div class="menu-toggle" id="menu-toggle">☰</div>
-
-    <nav id="nav">
-        <a onclick="mostrarSlide('inicio')">Inicio</a>
-        <a onclick="mostrarSlide('nosotros')">Nosotros</a>
-        <a onclick="mostrarSlide('entrenamientos')">Entrenamientos</a>
-        <a onclick="mostrarSlide('contacto')">Contacto</a>
-    </nav>
-</header>
-
-<!-- SLIDES -->
-
-<section id="inicio" class="slide activo hero">
-    <h2>Formando talentos en fútbol con disciplina, valores y trabajo en equipo</h2>
-</section>
-
-<section id="nosotros" class="slide">
-    <div class="bloque-institucional">
-        <div class="texto">
-            <h2>Institución Deportiva</h2>
-            <p>
-                Talentos De La Montañita es una iniciativa deportiva enfocada en la formación integral
-                de niños y jóvenes a través del fútbol sala.
-            </p>
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="logo-titulo">
+            <img src="LOGO/LOGO.png" alt="Escudo oficial de Talentos de La Montañita F.S.">
+            <h1>Talentos De La Montañita</h1>
         </div>
-        <div class="imagen">
-            <img src="LOGO/LOGO.png" alt="Logo">
-        </div>
-    </div>
 
-    <div class="filosofia">
-        <h2>Nuestra Filosofía</h2>
-        <p>
-            Creemos en el deporte como herramienta de transformación social.
-        </p>
-    </div>
-</section>
+        <!-- Menú móvil accesible -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de navegación" aria-controls="nav" aria-expanded="false">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
 
-<section id="entrenamientos" class="slide">
-    <div class="destacados">
-        <div class="destacado">
-            <h3>Formación Técnica</h3>
-            <p>Fundamentos técnicos y tácticos.</p>
-        </div>
-        <div class="destacado">
-            <h3>Preparación Física</h3>
-            <p>Resistencia, fuerza y velocidad.</p>
-        </div>
-        <div class="destacado">
-            <h3>Competencia Deportiva</h3>
-            <p>Participación en torneos locales.</p>
-        </div>
-    </div>
-</section>
+        <nav id="nav" aria-label="Navegación principal">
+            <a href="#" role="button" onclick="mostrarSlide('inicio'); return false;">Inicio</a>
+            <a href="#" role="button" onclick="mostrarSlide('nosotros'); return false;">Nosotros</a>
+            <a href="#" role="button" onclick="mostrarSlide('entrenamientos'); return false;">Entrenamientos</a>
+            <a href="#" role="button" onclick="mostrarSlide('contacto'); return false;">Contacto</a>
+        </nav>
+    </header>
 
-<section id="contacto" class="slide contacto">
-    <h2>Contacto</h2>
-    <p><strong>Director:</strong> Sofronio Gonzalez Muñoz</p>
-    <p><strong>Ubicación:</strong> La Montañita - Caquetá<br>Cancha La Alternativa de Todos</p>
+    <!-- SECCIONES PRINCIPALES (SLIDES) -->
+    <main>
+        <!-- Inicio / Hero -->
+        <section id="inicio" class="slide activo hero">
+            <div class="hero-contenido">
+                <h2>Formando talentos en fútbol con disciplina, valores y trabajo en equipo</h2>
+            </div>
+        </section>
 
-    <div class="botones-contacto">
-        <a href="https://wa.me/573249748458" target="_blank" class="btn whatsapp">
-            Escribir por WhatsApp
-        </a>
-        <a href="mailto:talentoslamontanita@gmail.com" class="btn correo">
-            Enviar Correo Electrónico
-        </a>
-    </div>
-</section>
+        <!-- Nosotros -->
+        <section id="nosotros" class="slide">
+            <div class="bloque-institucional">
+                <div class="texto">
+                    <h2>Institución Deportiva</h2>
+                    <p>
+                        Talentos De La Montañita es una iniciativa deportiva enfocada en la formación integral
+                        de niños y jóvenes a través del fútbol.
+                    </p>
+                </div>
+                <div class="imagen">
+                    <img src="LOGO/LOGO.png" alt="Logotipo institucional">
+                </div>
+            </div>
 
-<div class="footer">
-    © 2026 Talentos De La Montañita - Fútbol
-</div>
+            <div class="filosofia">
+                <h2>Nuestra Filosofía</h2>
+                <p>Creemos en el deporte como una herramienta fundamental de transformación social.</p>
+            </div>
+        </section>
 
-<script src="code.js"></script>
+        <!-- Entrenamientos -->
+        <section id="entrenamientos" class="slide">
+            <h2>Nuestros Pilares de Entrenamiento</h2>
+            <div class="destacados">
+                <div class="destacado">
+                    <span class="material-symbols-outlined icono-pilar"><h3>Formación Técnica</h3></span>
+                    <p>Fundamentos técnicos y tácticos individuales y colectivos.</p>
+                </div>
+                <div class="destacado">
+                    <span class="material-symbols-outlined icono-pilar"><h3>Preparación Física</h3></span>
+                    <p>Desarrollo óptimo de resistencia, fuerza, agilidad y velocidad.</p>
+                </div>
+                <div class="destacado">
+                    <span class="material-symbols-outlined icono-pilar"><h3>Competencia Deportiva</h3></span>
+                    <p>Participación activa en torneos y ligas de carácter local.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="slide contacto">
+            <h2>Contacto</h2>
+            
+            <div class="info-contacto">
+                <p>
+                    <span class="material-symbols-outlined"><strong>Director:</strong></span> 
+                     Sofronio Gonzalez Muñoz
+                </p>
+                <p>
+                    <span class="material-symbols-outlined"><strong>Ubicación:</strong></span> 
+                     La Montañita - Caquetá
+                </p>
+                <p class="cancha-detalle">
+                    <span class="material-symbols-outlined"><strong>Estadio:</strong></span>
+                    Cancha La Alternativa de Todos
+                </p>
+            </div>
+
+            <div class="botones-contacto">
+                <a href="https://wa.me/573249748458" target="_blank" rel="noopener noreferrer" class="btn whatsapp">
+                    <span class="material-symbols-outlined">WhatsApp</span> 
+                </a>
+                <a href="mailto:talentoslamontanita@gmail.com" class="btn correo">
+                    <span class="material-symbols-outlined">Correo Electrónico</span> 
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <p>© 2026 Talentos De La Montañita F.S. - Fútbol.</p>
+    </footer>
+
+    <!-- Archivo JavaScript -->
+    <script src="code.js"></script>
 </body>
 </html>
