@@ -4,198 +4,319 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Talentos De La Montañita F.S.</title>
-    <!-- Icono de la pestaña -->
     <link rel="icon" type="image/png" href="LOGO/LOGO.png">
-    <!-- Hojas de estilos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
-    <!-- Iconos modernos de Google -->
-    <link rel="stylesheet" href="https://googleapis.com" />
 </head>
 <body>
 
     <!-- ENCABEZADO -->
-    <header>
+    <header id="header">
         <div class="logo-titulo">
-            <img src="LOGO/LOGO.png" alt="Escudo oficial de Talentos de La Montañita F.S.">
-            <h1>Talentos De La Montañita</h1>
+            <div class="logo-ring">
+                <img src="LOGO/LOGO.png" alt="Escudo Talentos de La Montañita F.S.">
+            </div>
+            <div class="titulo-bloque">
+                <span class="titulo-top">Club de Fútbol</span>
+                <h1>Talentos De La Montañita</h1>
+            </div>
         </div>
 
-        <!-- Menú móvil accesible -->
-        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de navegación" aria-controls="nav" aria-expanded="false">
-            <span class="material-symbols-outlined">menu</span>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-controls="nav" aria-expanded="false">
+            <span class="material-icons-round">menu</span>
         </button>
 
         <nav id="nav" aria-label="Navegación principal">
-            <a href="#" role="button" onclick="mostrarSlide('inicio'); return false;">Inicio</a>
-            <a href="#" role="button" onclick="mostrarSlide('nosotros'); return false;">Nosotros</a>
-            <a href="#" role="button" onclick="mostrarSlide('entrenamientos'); return false;">Entrenamientos</a>
-            <a href="#" role="button" onclick="mostrarSlide('contacto'); return false;">Contacto</a>
+            <a href="#" onclick="mostrarSlide('inicio'); return false;" class="nav-link">
+                <span class="material-icons-round">home</span> Inicio
+            </a>
+            <a href="#" onclick="mostrarSlide('nosotros'); return false;" class="nav-link">
+                <span class="material-icons-round">groups</span> Nosotros
+            </a>
+            <a href="#" onclick="mostrarSlide('entrenamientos'); return false;" class="nav-link">
+                <span class="material-icons-round">sports_soccer</span> Entrenamientos
+            </a>
+            <a href="#" onclick="mostrarSlide('contacto'); return false;" class="nav-link">
+                <span class="material-icons-round">contact_phone</span> Contacto
+            </a>
         </nav>
     </header>
 
-    <!-- SECCIONES PRINCIPALES (SLIDES) -->
     <main>
-        <section id="inicio" class="slide activo hero">
-            <div class="hero-contenido">
-                <h2>Formando talentos en fútbol con disciplina, valores y trabajo en equipo</h2>
+        <!-- INICIO -->
+        <section id="inicio" class="slide activo">
+            <!-- Hero -->
+            <div class="hero-banner">
+                <div class="hero-overlay"></div>
+                <div class="hero-contenido">
+                    <p class="hero-eyebrow">⚽ La Montañita · Caquetá · Colombia</p>
+                    <h2 class="hero-titulo">Formando <span class="acento">Campeones</span><br>con Corazón y Disciplina</h2>
+                    <p class="hero-subtitulo">Niños y jóvenes que crecen a través del fútbol con valores, esfuerzo y trabajo en equipo.</p>
+                    <div class="hero-btns">
+                        <button class="btn-hero-primary" onclick="mostrarSlide('contacto')">Únete al equipo</button>
+                        <button class="btn-hero-secondary" onclick="mostrarSlide('nosotros')">Conoce el club</button>
+                    </div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">5+</span>
+                        <span class="stat-label">Años formando</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num">3</span>
+                        <span class="stat-label">Categorías</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label">Vocación</span>
+                    </div>
+                </div>
             </div>
 
-            <!-- Nueva Galería de Fotos -->
-            <div class="galeria-contenedor">
-                <h3 class="galeria-titulo">Nuestros Talentos en el Campo</h3>
+            <!-- Próximos Eventos -->
+            <div class="seccion-eventos">
+                <div class="seccion-header">
+                    <span class="tag-seccion">Agenda</span>
+                    <h2 class="seccion-titulo">Próximos Partidos y Torneos</h2>
+                </div>
+                <div class="eventos-grid">
+                    <div class="evento-card destacado-evento">
+                        <div class="evento-badge">Próximo</div>
+                        <div class="evento-icon"><span class="material-icons-round">emoji_events</span></div>
+                        <h3>COPA PAUJIL 2026</h3>
+                        <ul class="evento-detalles">
+                            <li><span class="material-icons-round">calendar_today</span> 17 y 18 de Mayo</li>
+                            <li><span class="material-icons-round">location_on</span> Cancha Las Mercedes — El Paujil</li>
+                            <li><span class="material-icons-round">child_care</span> Categoría 2017 (U-9)</li>
+                        </ul>
+                    </div>
+                    <div class="evento-card">
+                        <div class="evento-icon"><span class="material-icons-round">directions_run</span></div>
+                        <h3>Entrenamientos Semanales</h3>
+                        <ul class="evento-detalles">
+                            <li><span class="material-icons-round">event_repeat</span> Lunes a Viernes</li>
+                            <li><span class="material-icons-round">schedule</span> 4:30 PM — 6:30 PM</li>
+                            <li><span class="material-icons-round">stadium</span> Cancha La Alternativa de Todos</li>
+                        </ul>
+                    </div>
+                    <div class="evento-card pronto">
+                        <div class="evento-icon"><span class="material-icons-round">notifications_active</span></div>
+                        <h3>Próximo Torneo Local</h3>
+                        <p class="evento-pronto-texto">Muy pronto anunciaremos nuestra próxima competencia. ¡Mantente atento!</p>
+                        <a href="https://wa.me/573249748458" target="_blank" class="btn-notificar">
+                            <span class="material-icons-round">campaign</span> Notifícame
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Galería -->
+            <div class="seccion-galeria">
+                <div class="seccion-header">
+                    <span class="tag-seccion">Galería</span>
+                    <h2 class="seccion-titulo">Nuestros Talentos en el Campo</h2>
+                </div>
                 <div class="galeria-grid">
-                    
                     <div class="galeria-item">
-                        <img src="BANNER/img_banner1.jpeg" alt="Entrenamiento de control de balón">
-                        <div class="galeria-info">
-                            <h4>Formación Técnica</h4>
-                        </div>
+                        <img src="BANNER/img_banner1.jpeg" alt="Entrenamiento técnico">
+                        <div class="galeria-overlay"><span>Formación Técnica</span></div>
                     </div>
-
                     <div class="galeria-item">
-                        <img src="BANNER/foto2.jpeg" alt="Categoría juvenil en Cancha La Alternativa">
-                        <div class="galeria-info">
-                            <h4>Dreamteam</h4>
-                        </div>
+                        <img src="BANNER/foto2.jpeg" alt="Categoría juvenil">
+                        <div class="galeria-overlay"><span>Dreamteam</span></div>
                     </div>
-
                     <div class="galeria-item">
-                        <img src="BANNER/foto3.jpeg" alt="Ejercicios de velocidad y agilidad">
-                        <div class="galeria-info">
-                            <h4>Semillero Infantil</h4>
-                        </div>
+                        <img src="BANNER/foto3.jpeg" alt="Semillero infantil">
+                        <div class="galeria-overlay"><span>Semillero Infantil</span></div>
                     </div>
-
                     <div class="galeria-item">
-                        <img src="BANNER/foto4.jpeg" alt="Charla técnica del Profesor Sofronio">
-                        <div class="galeria-info">
-                            <h4>Competencia</h4>
-                        </div>
+                        <img src="BANNER/foto4.jpeg" alt="Charla técnica">
+                        <div class="galeria-overlay"><span>Competencia</span></div>
                     </div>
-
                     <div class="galeria-item">
-                        <img src="BANNER/foto5.jpeg" alt="Partido amistoso local">
-                        <div class="galeria-info">
-                            <h4>Preparación Física</h4>
-                        </div>
+                        <img src="BANNER/foto5.jpeg" alt="Partido amistoso">
+                        <div class="galeria-overlay"><span>Preparación Física</span></div>
                     </div>
-
                     <div class="galeria-item">
-                        <img src="BANNER/foto6.jpeg" alt="Semillero infantil de fútbol">
-                        <div class="galeria-info">
-                            <h4>Valores y Disciplina</h4>
-                        </div>
+                        <img src="BANNER/foto6.jpeg" alt="Valores y disciplina">
+                        <div class="galeria-overlay"><span>Valores y Disciplina</span></div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <!--eventos-->
-        <section class="eventos">
-    <h2>Próximos Partidos y Torneos</h2>
-
-    <div class="eventos-grid">
-
-        <div class="evento-card">
-            <h3>COPA PAUJIL 2026</h3>
-            <p><strong>Fecha:</strong> 17 y 18 de Mayo</p>
-            <p><strong>Lugar:</strong> Cancha Las Mercedes - El Paujil</p>
-            <p><strong>Categoría:</strong> 2017 (U-9)</p>
-        </div>
-
-        <div class="evento-card">
-            <h3>Entrenamientos Semanales</h3>
-            <p><strong>Días:</strong> Lunes a Viernes</p>
-            <p><strong>Hora:</strong> 4:30 PM - 6:30 PM</p>
-            <p><strong>Lugar:</strong> Cancha La Alternativa de Todos</p>
-        </div>
-
-        <div class="evento-card">
-            <h3>Próximo Torneo Local</h3>
-            <p>Muy pronto estaremos anunciando nuestra próxima competencia.</p>
-        </div>
-
-    </div>
-</section>
-
-        <!-- Nosotros -->
+        <!-- NOSOTROS -->
         <section id="nosotros" class="slide">
-            <div class="bloque-institucional">
-                <div class="texto">
-                    <h2>Institución Deportiva</h2>
-                    <p>
-                        Talentos De La Montañita es una iniciativa deportiva enfocada en la formación integral
-                        de niños y jóvenes a través del fútbol.
-                    </p>
+            <div class="nosotros-hero">
+                <div class="nosotros-hero-text">
+                    <span class="tag-seccion">Quiénes somos</span>
+                    <h2>Una escuela que forma personas, no solo jugadores</h2>
+                    <p>Talentos De La Montañita es una iniciativa deportiva nacida en el corazón del Caquetá, enfocada en la formación integral de niños y jóvenes a través del fútbol. Cada entrenamiento es una oportunidad para crecer, aprender y soñar en grande.</p>
+                    <p>Bajo la dirección del Profe <strong>Sofronio González Muñoz</strong>, el equipo ha construido una comunidad deportiva basada en la disciplina, el respeto y la pasión por el balón.</p>
                 </div>
-                <div class="imagen">
-                    <img src="LOGO/LOGO.png" alt="Logotipo institucional">
+                <div class="nosotros-logo-wrap">
+                    <img src="LOGO/LOGO.png" alt="Logo Talentos De La Montañita">
+                    <div class="logo-glow"></div>
                 </div>
             </div>
 
-            <div class="filosofia">
-                <h2>Nuestra Filosofía</h2>
-                <p>Creemos en el deporte como una herramienta fundamental de transformación social.</p>
+            <div class="filosofia-grid">
+                <div class="filo-card">
+                    <div class="filo-icon"><span class="material-icons-round">visibility</span></div>
+                    <h3>Visión</h3>
+                    <p>Ser referente deportivo del Caquetá, formando jugadores íntegros que trasciendan dentro y fuera del campo.</p>
+                </div>
+                <div class="filo-card">
+                    <div class="filo-icon"><span class="material-icons-round">flag</span></div>
+                    <h3>Misión</h3>
+                    <p>Formar niños y jóvenes con disciplina, valores y habilidades técnicas a través del fútbol como herramienta de transformación social.</p>
+                </div>
+                <div class="filo-card">
+                    <div class="filo-icon"><span class="material-icons-round">favorite</span></div>
+                    <h3>Valores</h3>
+                    <p>Respeto, esfuerzo, compañerismo, responsabilidad y amor por el deporte guían cada paso de nuestros talentos.</p>
+                </div>
             </div>
         </section>
 
-        <!-- Entrenamientos -->
+        <!-- ENTRENAMIENTOS -->
         <section id="entrenamientos" class="slide">
-            <h2>Nuestros Pilares de Entrenamiento</h2>
-            <div class="destacados">
-                <div class="destacado">
-                    <span class="material-symbols-outlined icono-pilar"><h3>Formación Técnica</h3></span>
-                    <p>Fundamentos técnicos y tácticos individuales y colectivos.</p>
+            <div class="seccion-header centrado">
+                <span class="tag-seccion">Metodología</span>
+                <h2 class="seccion-titulo">Nuestros Pilares de Entrenamiento</h2>
+                <p class="seccion-desc">Un enfoque integral que desarrolla todas las dimensiones del jugador.</p>
+            </div>
+
+            <div class="pilares-grid">
+                <div class="pilar-card">
+                    <div class="pilar-num">01</div>
+                    <div class="pilar-icon"><span class="material-icons-round">sports_soccer</span></div>
+                    <h3>Formación Técnica</h3>
+                    <p>Fundamentos técnicos y tácticos que construyen la base de un buen jugador: control, pase, regate y visión de juego.</p>
+                    <div class="pilar-barra"></div>
                 </div>
-                <div class="destacado">
-                    <span class="material-symbols-outlined icono-pilar"><h3>Preparación Física</h3></span>
-                    <p>Desarrollo óptimo de resistencia, fuerza, agilidad y velocidad.</p>
+                <div class="pilar-card">
+                    <div class="pilar-num">02</div>
+                    <div class="pilar-icon"><span class="material-icons-round">fitness_center</span></div>
+                    <h3>Preparación Física</h3>
+                    <p>Desarrollo de resistencia, fuerza, agilidad y velocidad, adaptado a la edad y nivel de cada jugador.</p>
+                    <div class="pilar-barra"></div>
                 </div>
-                <div class="destacado">
-                    <span class="material-symbols-outlined icono-pilar"><h3>Competencia Deportiva</h3></span>
-                    <p>Participación activa en torneos y ligas de carácter local.</p>
+                <div class="pilar-card">
+                    <div class="pilar-num">03</div>
+                    <div class="pilar-icon"><span class="material-icons-round">emoji_events</span></div>
+                    <h3>Competencia Deportiva</h3>
+                    <p>Participación activa en torneos y ligas locales para aplicar lo aprendido bajo presión real de competencia.</p>
+                    <div class="pilar-barra"></div>
                 </div>
+                <div class="pilar-card">
+                    <div class="pilar-num">04</div>
+                    <div class="pilar-icon"><span class="material-icons-round">psychology</span></div>
+                    <h3>Formación en Valores</h3>
+                    <p>El fútbol como escuela de vida: respeto, liderazgo, trabajo en equipo y superación personal en cada sesión.</p>
+                    <div class="pilar-barra"></div>
+                </div>
+            </div>
+
+            <div class="horario-banner">
+                <span class="material-icons-round">schedule</span>
+                <div>
+                    <strong>Horario de Entrenamientos</strong>
+                    <p>Lunes a Viernes · 4:30 PM – 6:30 PM · Cancha La Alternativa de Todos</p>
+                </div>
+                <button class="btn-inscribir" onclick="mostrarSlide('contacto')">Inscribirse →</button>
             </div>
         </section>
 
-        <!-- Contacto -->
-        <section id="contacto" class="slide contacto">
-            <h2>Contacto</h2>
-            
-            <div class="info-contacto">
-                <p>
-                    <span class="material-symbols-outlined"><strong>Director:</strong></span> 
-                     Sofronio Gonzalez Muñoz
-                </p>
-                <p>
-                    <span class="material-symbols-outlined"><strong>Ubicación:</strong></span> 
-                     La Montañita - Caquetá
-                </p>
-                <p class="cancha-detalle">
-                    <span class="material-symbols-outlined"><strong>Estadio:</strong></span>
-                    Cancha La Alternativa de Todos
-                </p>
-            </div>
+        <!-- CONTACTO -->
+        <section id="contacto" class="slide">
+            <div class="contacto-wrapper">
+                <div class="contacto-info">
+                    <span class="tag-seccion">Contacto</span>
+                    <h2>¿Listo para unirte?</h2>
+                    <p>Escríbenos o visítanos. Tenemos cupo para nuevos talentos en todas nuestras categorías.</p>
 
-            <div class="botones-contacto">
-                <a href="https://wa.me/573249748458" target="_blank" rel="noopener noreferrer" class="btn whatsapp">
-                    <span class="material-symbols-outlined">WhatsApp</span> 
-                </a>
-                <a href="mailto:talentoslamontanita@gmail.com" class="btn correo">
-                    <span class="material-symbols-outlined">Correo Electrónico</span> 
-                </a>
+                    <ul class="info-lista">
+                        <li>
+                            <div class="info-icono"><span class="material-icons-round">person</span></div>
+                            <div>
+                                <span class="info-label">Director Técnico</span>
+                                <span class="info-valor">Sofronio González Muñoz</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info-icono"><span class="material-icons-round">location_on</span></div>
+                            <div>
+                                <span class="info-label">Municipio</span>
+                                <span class="info-valor">La Montañita · Caquetá</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info-icono"><span class="material-icons-round">stadium</span></div>
+                            <div>
+                                <span class="info-label">Cancha</span>
+                                <span class="info-valor">La Alternativa de Todos</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info-icono"><span class="material-icons-round">schedule</span></div>
+                            <div>
+                                <span class="info-label">Horario</span>
+                                <span class="info-valor">Lun – Vie · 4:30 PM – 6:30 PM</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contacto-acciones">
+                    <div class="accion-card whatsapp-card">
+                        <div class="accion-header">
+                            <span class="material-icons-round">chat</span>
+                            <h3>WhatsApp</h3>
+                        </div>
+                        <p>La forma más rápida de contactarnos. ¡Respondemos rápido!</p>
+                        <a href="https://wa.me/573249748458" target="_blank" rel="noopener noreferrer" class="btn-accion wa">
+                            <span class="material-icons-round">send</span> Escribir en WhatsApp
+                        </a>
+                    </div>
+
+                    <div class="accion-card correo-card">
+                        <div class="accion-header">
+                            <span class="material-icons-round">mail</span>
+                            <h3>Correo Electrónico</h3>
+                        </div>
+                        <p>Para consultas formales o información sobre inscripciones.</p>
+                        <a href="mailto:talentoslamontanita@gmail.com" class="btn-accion email">
+                            <span class="material-icons-round">forward_to_inbox</span> Enviar correo
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- PIE DE PÁGINA -->
-    <footer class="footer">
-        <p>© 2026 Talentos De La Montañita F.S. - Fútbol.</p>
-        <p>BY: BRAYAN STIVEN CARDONA LIZCANO</p>
+    <footer>
+        <div class="footer-inner">
+            <img src="LOGO/LOGO.png" alt="Logo" class="footer-logo">
+            <div>
+                <p class="footer-nombre">Talentos De La Montañita F.S.</p>
+                <p class="footer-sub">© 2026 · La Montañita, Caquetá · Todos los derechos reservados</p>
+            </div>
+            <p class="footer-dev">Desarrollado por <strong>Brayan Stiven Cardona Lizcano</strong></p>
+        </div>
     </footer>
 
-    <!-- Archivo JavaScript -->
     <script src="code.js"></script>
+    <script>
+        // Efecto scroll en header
+        window.addEventListener('scroll', () => {
+            document.getElementById('header').classList.toggle('scrolled', window.scrollY > 30);
+        });
+    </script>
 </body>
 </html>
